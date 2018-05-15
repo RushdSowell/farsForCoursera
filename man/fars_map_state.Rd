@@ -24,7 +24,7 @@ The function will show us the location on a state map, of where accidents happen
  at the State.
 }
 \examples{
-fars_maps_state(1, 2013)
-fars_maps_state(3, 2015).
+fars_map_state(1, 2013)
+fars_map_state(3, 2015).
 
 }
