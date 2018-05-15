@@ -21,6 +21,9 @@ The function takes the list of years that we want to know about the accident,
  if the data of the year we inputed is not availabe.
 }
 \examples{
+# Setting the path for the example data
+expath <- system.file("extdata", package="farsForCoursera")
+setwd(expath)
 fars_read_years(c(2013, 2014))
 fars_read_years(2013)
 
