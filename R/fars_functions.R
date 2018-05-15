@@ -131,6 +131,9 @@ fars_summarize_years <- function(years) {
 #' @importFrom graphics points
 #'
 #' @examples
+#' # Setting the path for the example data
+#' expath <- system.file("extdata", package="farsForCoursera")
+#' setwd(expath)
 #' fars_map_state(1, 2013)
 #' fars_map_state(3, 2015).
 #'
