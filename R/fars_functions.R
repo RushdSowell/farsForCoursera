@@ -143,7 +143,7 @@ fars_summarize_years <- function(years) {
 #' expath <- system.file("extdata", package="farsForCoursera")
 #' setwd(expath)
 #' fars_map_state(1, 2013)
-#' fars_map_state(3, 2015)
+#' fars_map_state(5, 2015)
 #'
 #' @export
 fars_map_state <- function(state.num, year) {
