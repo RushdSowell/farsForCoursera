@@ -22,6 +22,6 @@ This is a function that first check if the file name inserted exist.
 # Setting the path for the example data
 expath <- system.file("extdata", package="farsForCoursera")
 setwd(expath)
-fars_read("accident_2013.csv")
+fars_read("accident_2013.csv.bz2")
 
 }
