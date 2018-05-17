@@ -20,9 +20,6 @@ By giving a list of years that we want to know about the road accidents that hap
  grouped by the years and months.
 }
 \examples{
-# Setting the path for the example data
-expath <- system.file("extdata", package="farsForCoursera")
-setwd(expath)
 fars_summarize_years(c(2013, 2014, 2015))
 fars_summarize_years(2015)
 

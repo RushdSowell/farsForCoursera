@@ -13,10 +13,7 @@
 #' @importFrom dplyr tbl_df
 #'
 #' @examples
-#' # Setting the path for the example data
-#' expath <- system.file("extdata", package="farsForCoursera")
-#' setwd(expath)
-#' fars_read("accident_2013.csv.bz2")
+#' fars_read(system.file("extdata", "accident_2013.csv.bz2", package = "farsForCoursera"))
 #'
 #' @export
 fars_read <- function(filename) {
@@ -46,7 +43,8 @@ fars_read <- function(filename) {
 #' @export
 make_filename <- function(year) {
   year <- as.integer(year)
-  sprintf("accident_%d.csv.bz2", year)
+  file <- sprintf("accident_%d.csv.bz2", year)
+  system.file("extdata", file, package = "farsForCoursera" )
 }
 
 #'  Year and month the accidents happened.
@@ -66,9 +64,6 @@ make_filename <- function(year) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' # Setting the path for the example data
-#' expath <- system.file("extdata", package="farsForCoursera")
-#' setwd(expath)
 #' fars_read_years(c(2013, 2014))
 #' fars_read_years(2013)
 #'
@@ -104,9 +99,6 @@ fars_read_years <- function(years) {
 #' @importFrom magrittr "%>%"
 #'
 #' @examples
-#' # Setting the path for the example data
-#' expath <- system.file("extdata", package="farsForCoursera")
-#' setwd(expath)
 #' fars_summarize_years(c(2013, 2014, 2015))
 #' fars_summarize_years(2015)
 #'
@@ -139,9 +131,6 @@ fars_summarize_years <- function(years) {
 #' @importFrom graphics points
 #'
 #' @examples
-#' # Setting the path for the example data
-#' expath <- system.file("extdata", package="farsForCoursera")
-#' setwd(expath)
 #' fars_map_state(1, 2013)
 #' fars_map_state(5, 2015)
 #'
